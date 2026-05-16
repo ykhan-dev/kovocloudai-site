@@ -130,7 +130,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://calendly.com/ykhan212/30min"
+            href="https://calendly.com/kovocloud/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
