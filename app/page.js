@@ -5,19 +5,30 @@ export default function Home() {
         backgroundColor: "#f8fafc",
         minHeight: "100vh",
         color: "#0f172a",
+        scrollBehavior: "smooth",
       }}
     >
-      {/* Tiny embedded style tag to handle interactive button hovers cleanly */}
       <style>{`
-        .btn-primary:hover { background-color: #0d9488 !important; transform: translateY(-1px); }
-        .service-card:hover { border-color: #cbd5e1 !important; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05); }
+        .btn-primary:hover { 
+          background-color: #0d9488 !important; 
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+        }
+        .service-card:hover { 
+          border-color: #0f766e !important; 
+          box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05); 
+          transform: translateY(-2px);
+        }
       `}</style>
 
-      {/* Navigation Header */}
+      {/* Navigation */}
       <header
         style={{
           borderBottom: "1px solid #e2e8f0",
           backgroundColor: "#ffffff",
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
         }}
       >
         <div
@@ -40,14 +51,14 @@ export default function Home() {
           >
             kovocloud<span style={{ color: "#0f766e" }}>ai</span>
           </span>
-          <nav>
+
+          <nav style={{ display: "flex", gap: "20px" }}>
             <a
               href="#services"
               style={{
                 color: "#475569",
                 textDecoration: "none",
                 fontSize: "14px",
-                marginRight: "20px",
                 fontWeight: "500",
               }}
             >
@@ -59,7 +70,6 @@ export default function Home() {
                 color: "#475569",
                 textDecoration: "none",
                 fontSize: "14px",
-                marginRight: "20px",
                 fontWeight: "500",
               }}
             >
@@ -80,7 +90,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Container */}
+      {/* Main */}
       <main
         style={{
           fontFamily:
@@ -90,7 +100,7 @@ export default function Home() {
           padding: "40px 24px",
         }}
       >
-        {/* Hero Section */}
+        {/* Hero */}
         <section style={{ padding: "60px 0 80px 0" }}>
           <h1
             style={{
@@ -120,25 +130,27 @@ export default function Home() {
           </p>
 
           <a
-            href="#contact"
+            href="https://calendly.com/ykhan212/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{
               display: "inline-block",
               padding: "14px 28px",
-              background: "#0f766e", // Deep Teal - Represents security and stability
+              background: "#0f766e",
               color: "#ffffff",
               textDecoration: "none",
               borderRadius: "6px",
               fontWeight: "600",
               fontSize: "16px",
-              transition: "all 0.2s ease",
+              transition: "all 0.2s ease-in-out",
             }}
           >
-            Book a Free Cloud Review
+            Schedule a Free AWS Review
           </a>
         </section>
 
-        {/* Core Capabilities Section */}
+        {/* Services */}
         <section id="services" style={{ padding: "40px 0" }}>
           <h2
             style={{
@@ -154,26 +166,26 @@ export default function Home() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "16px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "20px",
             }}
           >
             {[
               {
                 title: "AWS Cost Optimization",
-                desc: "Identify underutilized resources and immediately eliminate cloud waste.",
+                desc: "Identify underutilized resources and eliminate unnecessary cloud waste.",
               },
               {
                 title: "Cloud Security & IAM",
-                desc: "Tighten access control, secure network boundaries, and close vulnerabilities.",
+                desc: "Secure access control, IAM permissions, and network exposure.",
               },
               {
                 title: "Architecture Simplification",
-                desc: "Strip out unnecessary infrastructure complexity to lower maintenance overhead.",
+                desc: "Reduce infrastructure complexity and improve operational clarity.",
               },
               {
                 title: "Operational Stability",
-                desc: "Establish clear visibility, monitoring, and predictable performance.",
+                desc: "Improve visibility, monitoring, and reliability across environments.",
               },
             ].map((service, index) => (
               <div
@@ -184,7 +196,7 @@ export default function Home() {
                   padding: "24px",
                   borderRadius: "8px",
                   border: "1px solid #e2e8f0",
-                  transition: "all 0.2s ease",
+                  transition: "all 0.2s ease-in-out",
                 }}
               >
                 <h3
@@ -197,6 +209,7 @@ export default function Home() {
                 >
                   {service.title}
                 </h3>
+
                 <p
                   style={{
                     fontSize: "14px",
@@ -212,7 +225,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section */}
+        {/* About */}
         <section id="about" style={{ padding: "60px 0 40px 0" }}>
           <h2
             style={{
@@ -224,6 +237,7 @@ export default function Home() {
           >
             About
           </h2>
+
           <p
             style={{
               fontSize: "16px",
@@ -233,18 +247,18 @@ export default function Home() {
             }}
           >
             I specialize in AWS security frameworks and cloud cost optimization
-            specifically tailored for SMEs. My focus is practical, high-impact
-            engineering fixes that reduce operational risk and complexity
-            without disrupting your ongoing business delivery.
+            tailored for SMEs. My focus is practical, high-impact engineering
+            improvements that reduce operational risk, cloud waste, and
+            unnecessary complexity.
           </p>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact */}
         <section
           id="contact"
           style={{
-            padding: "40px",
-            backgroundColor: "#0f172a", // Dark Deep Slate Blue for emphasis
+            padding: "40px 32px",
+            backgroundColor: "#0f172a",
             borderRadius: "12px",
             color: "#ffffff",
             marginTop: "40px",
@@ -260,39 +274,52 @@ export default function Home() {
           >
             Let's Secure & Optimize Your Cloud
           </h2>
+
           <p
-            style={{ color: "#94a3b8", marginBottom: "24px", fontSize: "15px" }}
+            style={{ color: "#94a3b8", marginBottom: "32px", fontSize: "15px" }}
           >
-            Get in touch to schedule your free diagnostic review.
+            Schedule a free AWS review or connect with me on LinkedIn.
           </p>
 
           <div
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: "24px",
+              gap: "32px",
               fontSize: "16px",
             }}
           >
-            <p style={{ margin: "0" }}>
-              Email:{" "}
+            <div style={{ margin: "0" }}>
+              <span style={{ color: "#94a3b8" }}>Email:</span>
               <a
                 href="mailto:yousuf@kovocloudai.com"
                 style={{
                   color: "#2dd4bf",
                   fontWeight: "600",
                   textDecoration: "none",
+                  marginLeft: "8px",
                 }}
               >
                 yousuf@kovocloudai.com
               </a>
-            </p>
-            <p style={{ margin: "0", color: "#cbd5e1" }}>
-              LinkedIn:{" "}
-              <span style={{ color: "#ffffff", fontWeight: "500" }}>
+            </div>
+
+            <div style={{ margin: "0" }}>
+              <span style={{ color: "#94a3b8" }}>LinkedIn:</span>
+              <a
+                href="https://www.linkedin.com/in/yousuf-k-618b486/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#2dd4bf",
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  marginLeft: "8px",
+                }}
+              >
                 Connect & Message Directly
-              </span>
-            </p>
+              </a>
+            </div>
           </div>
         </section>
       </main>
