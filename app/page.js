@@ -6,320 +6,347 @@ export default function Home() {
         minHeight: "100vh",
         color: "#0f172a",
         scrollBehavior: "smooth",
+        fontFamily:
+          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       }}
     >
+      {/* Styles */}
       <style>{`
         .btn-primary:hover { 
           background-color: #0d9488 !important; 
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+          box-shadow: 0 6px 18px rgba(15, 118, 110, 0.25);
         }
-        .service-card:hover { 
+
+        .card:hover { 
           border-color: #0f766e !important; 
-          box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05); 
           transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        }
+
+        .linkedin-btn:hover {
+          background-color: #004182 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(10, 102, 194, 0.35);
         }
       `}</style>
 
-      {/* Navigation */}
+      {/* NAV */}
       <header
         style={{
-          borderBottom: "1px solid #e2e8f0",
-          backgroundColor: "#ffffff",
           position: "sticky",
           top: 0,
+          backgroundColor: "#ffffff",
+          borderBottom: "1px solid #e2e8f0",
           zIndex: 50,
         }}
       >
         <div
           style={{
-            maxWidth: "900px",
+            maxWidth: "950px",
             margin: "0 auto",
-            padding: "20px 24px",
+            padding: "16px 24px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
           }}
         >
-          <span
-            style={{
-              fontWeight: "800",
-              fontSize: "18px",
-              color: "#0f172a",
-              letterSpacing: "-0.03em",
-            }}
-          >
-            kovocloud<span style={{ color: "#0f766e" }}>ai</span>
-          </span>
+          <div style={{ fontWeight: 800, fontSize: "18px" }}>
+            kovo<span style={{ color: "#0f766e" }}>cloudai</span>
+          </div>
 
-          <nav style={{ display: "flex", gap: "20px" }}>
+          <nav style={{ display: "flex", gap: "18px", fontSize: "14px" }}>
+            <a href="#who" style={{ textDecoration: "none", color: "#475569" }}>
+              Who It’s For
+            </a>
+            <a
+              href="#approach"
+              style={{ textDecoration: "none", color: "#475569" }}
+            >
+              Approach
+            </a>
             <a
               href="#services"
-              style={{
-                color: "#475569",
-                textDecoration: "none",
-                fontSize: "14px",
-                fontWeight: "500",
-              }}
+              style={{ textDecoration: "none", color: "#475569" }}
             >
-              Services
+              Focus Areas
             </a>
             <a
               href="#about"
-              style={{
-                color: "#475569",
-                textDecoration: "none",
-                fontSize: "14px",
-                fontWeight: "500",
-              }}
+              style={{ textDecoration: "none", color: "#475569" }}
             >
               About
             </a>
             <a
               href="#contact"
               style={{
-                color: "#0f766e",
                 textDecoration: "none",
-                fontSize: "14px",
-                fontWeight: "600",
+                color: "#0f766e",
+                fontWeight: 600,
               }}
             >
-              Contact
+              Book Call
             </a>
           </nav>
         </div>
       </header>
 
-      {/* Main */}
+      {/* MAIN */}
       <main
         style={{
-          fontFamily:
-            "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          maxWidth: "900px",
+          maxWidth: "950px",
           margin: "0 auto",
-          padding: "40px 24px",
+          padding: "50px 24px",
         }}
       >
-        {/* Hero */}
-        <section style={{ padding: "60px 0 80px 0" }}>
+        {/* HERO */}
+        <section style={{ padding: "60px 0 40px 0" }}>
           <h1
             style={{
-              fontSize: "clamp(34px, 5vw, 50px)",
-              lineHeight: "1.15",
-              marginBottom: "24px",
-              fontWeight: "800",
+              fontSize: "clamp(34px, 5vw, 52px)",
+              lineHeight: "1.1",
+              fontWeight: 800,
               letterSpacing: "-0.03em",
-              color: "#0f172a",
             }}
           >
-            Stop Overspending on AWS While Strengthening Your Cloud Security
+            AWS Cost & Security Clarity for Small and Mid-Sized Teams
           </h1>
 
           <p
             style={{
-              fontSize: "clamp(17px, 3vw, 20px)",
+              marginTop: "18px",
+              fontSize: "18px",
               color: "#475569",
               lineHeight: "1.6",
-              marginBottom: "36px",
-              maxWidth: "740px",
+              maxWidth: "720px",
             }}
           >
-            I help small and mid-sized businesses reduce unnecessary AWS costs,
-            fix critical security gaps, and stabilize cloud environments without
-            overengineering.
+            I help SMEs running AWS environments simplify infrastructure,
+            improve security posture, and reduce operational complexity through
+            practical engineering-focused reviews.
           </p>
-
-          <a
-            href="https://calendly.com/kovocloud/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{
-              display: "inline-block",
-              padding: "14px 28px",
-              background: "#0f766e",
-              color: "#ffffff",
-              textDecoration: "none",
-              borderRadius: "6px",
-              fontWeight: "600",
-              fontSize: "16px",
-              transition: "all 0.2s ease-in-out",
-            }}
-          >
-            Schedule a Free AWS Review
-          </a>
-        </section>
-
-        {/* Services */}
-        <section id="services" style={{ padding: "40px 0" }}>
-          <h2
-            style={{
-              fontSize: "24px",
-              marginBottom: "24px",
-              fontWeight: "700",
-              color: "#1e293b",
-            }}
-          >
-            What I Help With
-          </h2>
 
           <div
             style={{
+              marginTop: "28px",
+              display: "flex",
+              gap: "12px",
+              flexWrap: "wrap",
+            }}
+          >
+            <a
+              href="https://calendly.com/kovocloud/30min"
+              target="_blank"
+              className="btn-primary"
+              style={{
+                padding: "14px 20px",
+                backgroundColor: "#0f766e",
+                color: "#fff",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: 600,
+                display: "inline-block",
+              }}
+            >
+              Book Free AWS Review
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/yousuf-k-618b486/"
+              target="_blank"
+              className="linkedin-btn"
+              style={{
+                padding: "14px 20px",
+                backgroundColor: "#0a66c2",
+                color: "#ffffff",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: 700,
+                border: "1px solid #0a66c2",
+                display: "inline-block",
+                boxShadow: "0 3px 10px rgba(10, 102, 194, 0.35)",
+              }}
+            >
+              View LinkedIn Profile
+            </a>
+          </div>
+        </section>
+
+        {/* WHO IT'S FOR (URGENT + RISK + COST FOCUS) */}
+        <section id="who" style={{ padding: "50px 0" }}>
+          <h2 style={{ fontSize: "24px", fontWeight: 700 }}>Who This Is For</h2>
+
+          <p
+            style={{
+              marginTop: "10px",
+              color: "#475569",
+              lineHeight: "1.6",
+              maxWidth: "780px",
+            }}
+          >
+            This is for teams where AWS is already in use, but visibility, cost
+            control, and security posture are becoming harder to manage — and
+            small issues could quietly turn into larger operational or security
+            risks.
+          </p>
+
+          <div style={{ marginTop: "18px", display: "grid", gap: "12px" }}>
+            {[
+              "SMEs using AWS without dedicated security or cloud engineering oversight",
+              "Environments where IAM permissions and access control have grown over time without structured review",
+              "Teams concerned about potential security exposure or unclear network boundaries",
+              "Organizations seeing rising AWS costs but lacking clear visibility into what is driving them",
+              "Businesses that want to simplify cloud architecture before complexity becomes a long-term operational risk",
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: "#ffffff",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: "8px",
+                  padding: "14px 16px",
+                }}
+              >
+                ✓ {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* APPROACH */}
+        <section id="approach" style={{ padding: "50px 0" }}>
+          <h2 style={{ fontSize: "24px", fontWeight: 700 }}>
+            How the Free AWS Review Works
+          </h2>
+
+          <div style={{ marginTop: "18px", display: "grid", gap: "12px" }}>
+            {[
+              "Understand your current AWS setup at a high level",
+              "Identify security and configuration concerns",
+              "Highlight cost inefficiencies and unused resources",
+              "Review architecture simplicity and operational clarity",
+              "Discuss practical next steps based on priorities",
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: "#ffffff",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: "8px",
+                  padding: "14px 16px",
+                }}
+              >
+                → {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section id="services" style={{ padding: "50px 0" }}>
+          <h2 style={{ fontSize: "24px", fontWeight: 700 }}>Focus Areas</h2>
+
+          <div
+            style={{
+              marginTop: "18px",
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "20px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "16px",
             }}
           >
             {[
               {
-                title: "AWS Cost Optimization",
-                desc: "Identify underutilized resources and eliminate unnecessary cloud waste.",
+                title: "AWS Security Review",
+                desc: "IAM, access control, and exposure analysis",
               },
               {
-                title: "Cloud Security & IAM",
-                desc: "Secure access control, IAM permissions, and network exposure.",
+                title: "Cost & Usage Review",
+                desc: "Identify inefficiencies and unused resources",
               },
               {
                 title: "Architecture Simplification",
-                desc: "Reduce infrastructure complexity and improve operational clarity.",
+                desc: "Reduce unnecessary complexity",
               },
               {
                 title: "Operational Stability",
-                desc: "Improve visibility, monitoring, and reliability across environments.",
+                desc: "Improve visibility and system reliability",
               },
-            ].map((service, index) => (
+            ].map((item, i) => (
               <div
-                key={index}
-                className="service-card"
+                key={i}
+                className="card"
                 style={{
-                  backgroundColor: "#ffffff",
-                  padding: "24px",
-                  borderRadius: "8px",
+                  backgroundColor: "#fff",
                   border: "1px solid #e2e8f0",
-                  transition: "all 0.2s ease-in-out",
+                  borderRadius: "10px",
+                  padding: "18px",
+                  transition: "0.2s",
                 }}
               >
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: "700",
-                    marginBottom: "8px",
-                    color: "#0f766e",
-                  }}
-                >
-                  {service.title}
+                <h3 style={{ color: "#0f766e", fontSize: "16px" }}>
+                  {item.title}
                 </h3>
-
-                <p
-                  style={{
-                    fontSize: "14px",
-                    color: "#475569",
-                    margin: "0",
-                    lineHeight: "1.5",
-                  }}
-                >
-                  {service.desc}
+                <p style={{ color: "#475569", fontSize: "14px" }}>
+                  {item.desc}
                 </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* About */}
-        <section id="about" style={{ padding: "60px 0 40px 0" }}>
-          <h2
-            style={{
-              fontSize: "24px",
-              marginBottom: "16px",
-              fontWeight: "700",
-              color: "#1e293b",
-            }}
-          >
-            About
-          </h2>
+        {/* ABOUT */}
+        <section id="about" style={{ padding: "60px 0" }}>
+          <h2 style={{ fontSize: "24px", fontWeight: 700 }}>About</h2>
 
           <p
             style={{
-              fontSize: "16px",
+              marginTop: "12px",
               color: "#475569",
               lineHeight: "1.6",
-              maxWidth: "720px",
+              maxWidth: "780px",
             }}
           >
-            I specialize in AWS security frameworks and cloud cost optimization
-            tailored for SMEs. My focus is practical, high-impact engineering
-            improvements that reduce operational risk, cloud waste, and
-            unnecessary complexity.
+            I specialize in AWS security and cloud optimization for SMEs,
+            focusing on practical, engineering-led improvements that reduce
+            complexity, improve visibility, and strengthen cloud environments
+            without unnecessary overengineering.
           </p>
         </section>
 
-        {/* Contact */}
+        {/* CONTACT */}
         <section
           id="contact"
           style={{
-            padding: "40px 32px",
             backgroundColor: "#0f172a",
+            color: "#fff",
+            padding: "40px",
             borderRadius: "12px",
-            color: "#ffffff",
-            marginTop: "40px",
+            marginTop: "30px",
           }}
         >
-          <h2
-            style={{
-              fontSize: "24px",
-              marginBottom: "12px",
-              fontWeight: "700",
-              color: "#ffffff",
-            }}
-          >
-            Let's Secure & Optimize Your Cloud
-          </h2>
+          <h2 style={{ marginBottom: "10px" }}>Book Your Free AWS Review</h2>
 
-          <p
-            style={{ color: "#94a3b8", marginBottom: "32px", fontSize: "15px" }}
-          >
-            Schedule a free AWS review or connect with me on LinkedIn.
+          <p style={{ color: "#94a3b8" }}>
+            A focused conversation to understand your AWS setup and priorities.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "32px",
-              fontSize: "16px",
-            }}
-          >
-            <div style={{ margin: "0" }}>
-              <span style={{ color: "#94a3b8" }}>Email:</span>
-              <a
-                href="mailto:yousuf@kovocloudai.com"
-                style={{
-                  color: "#2dd4bf",
-                  fontWeight: "600",
-                  textDecoration: "none",
-                  marginLeft: "8px",
-                }}
-              >
-                yousuf@kovocloudai.com
-              </a>
-            </div>
-
-            <div style={{ margin: "0" }}>
-              <span style={{ color: "#94a3b8" }}>LinkedIn:</span>
-              <a
-                href="https://www.linkedin.com/in/yousuf-k-618b486/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: "#2dd4bf",
-                  fontWeight: "600",
-                  textDecoration: "none",
-                  marginLeft: "8px",
-                }}
-              >
-                Connect & Message Directly
-              </a>
-            </div>
+          <div style={{ marginTop: "15px" }}>
+            <a
+              href="https://calendly.com/kovocloud/30min"
+              target="_blank"
+              style={{
+                display: "inline-block",
+                marginTop: "10px",
+                padding: "12px 18px",
+                backgroundColor: "#0f766e",
+                color: "#fff",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: 600,
+              }}
+            >
+              Schedule on Calendly
+            </a>
           </div>
         </section>
       </main>
