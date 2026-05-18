@@ -109,7 +109,8 @@ export default function Home() {
               letterSpacing: "-0.03em",
             }}
           >
-            AWS Cost & Security Clarity for Small and Mid-Sized Teams
+            Reduce AWS Costs, Strengthen Cloud Security, and Simplify Your
+            Infrastructure for Small and Medium-Sized Enterprises (SMEs)
           </h1>
 
           <p
@@ -118,12 +119,13 @@ export default function Home() {
               fontSize: "18px",
               color: "#475569",
               lineHeight: "1.6",
-              maxWidth: "720px",
+              maxWidth: "780px",
             }}
           >
-            I help SMEs running AWS environments simplify infrastructure,
-            improve security posture, and reduce operational complexity through
-            practical engineering-focused reviews.
+            I help Small and Medium-Sized Enterprises (SMEs) running AWS
+            environments reduce unnecessary cloud spending, secure their digital
+            assets and business systems, and simplify complex infrastructure
+            through practical, engineering-led reviews.
           </p>
 
           <div
@@ -172,7 +174,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WHO IT'S FOR (URGENT + RISK + COST FOCUS) */}
+        {/* WHO IT'S FOR */}
         <section id="who" style={{ padding: "50px 0" }}>
           <h2 style={{ fontSize: "24px", fontWeight: 700 }}>Who This Is For</h2>
 
@@ -184,19 +186,19 @@ export default function Home() {
               maxWidth: "780px",
             }}
           >
-            This is for teams where AWS is already in use, but visibility, cost
-            control, and security posture are becoming harder to manage — and
-            small issues could quietly turn into larger operational or security
-            risks.
+            This is for Small and Medium-Sized Enterprises (SMEs) where AWS is
+            already in use, but cloud costs are increasing, systems are becoming
+            harder to manage, and there may be hidden security risks that are
+            not yet fully visible.
           </p>
 
           <div style={{ marginTop: "18px", display: "grid", gap: "12px" }}>
             {[
-              "SMEs using AWS without dedicated security or cloud engineering oversight",
-              "Environments where IAM permissions and access control have grown over time without structured review",
-              "Teams concerned about potential security exposure or unclear network boundaries",
-              "Organizations seeing rising AWS costs but lacking clear visibility into what is driving them",
-              "Businesses that want to simplify cloud architecture before complexity becomes a long-term operational risk",
+              "SMEs using AWS without dedicated cloud or security specialists",
+              "Systems where user access and permissions have grown over time without structured review",
+              "Businesses concerned about protecting sensitive data and cloud resources",
+              "Organizations experiencing rising AWS costs without clear understanding of what is driving them",
+              "Companies wanting to simplify their cloud setup before it becomes expensive and difficult to manage",
             ].map((item, i) => (
               <div
                 key={i}
@@ -221,11 +223,11 @@ export default function Home() {
 
           <div style={{ marginTop: "18px", display: "grid", gap: "12px" }}>
             {[
-              "Understand your current AWS setup at a high level",
-              "Identify security and configuration concerns",
-              "Highlight cost inefficiencies and unused resources",
-              "Review architecture simplicity and operational clarity",
-              "Discuss practical next steps based on priorities",
+              "Understand your AWS setup and current usage",
+              "Identify areas of unnecessary cost and inefficiency",
+              "Review how your cloud environment is secured and accessed",
+              "Highlight structural and architectural improvements",
+              "Discuss practical next steps based on your business priorities",
             ].map((item, i) => (
               <div
                 key={i}
@@ -256,20 +258,20 @@ export default function Home() {
           >
             {[
               {
-                title: "AWS Security Review",
-                desc: "IAM, access control, and exposure analysis",
+                title: "Cloud Security Review",
+                desc: "Protect your AWS environment and sensitive business data",
               },
               {
-                title: "Cost & Usage Review",
-                desc: "Identify inefficiencies and unused resources",
+                title: "Cost Optimization",
+                desc: "Reduce unnecessary cloud spending and improve efficiency",
               },
               {
                 title: "Architecture Simplification",
-                desc: "Reduce unnecessary complexity",
+                desc: "Remove unnecessary complexity in your cloud setup",
               },
               {
                 title: "Operational Stability",
-                desc: "Improve visibility and system reliability",
+                desc: "Improve reliability, visibility, and control",
               },
             ].map((item, i) => (
               <div
@@ -306,10 +308,9 @@ export default function Home() {
               maxWidth: "780px",
             }}
           >
-            I specialize in AWS security and cloud optimization for SMEs,
-            focusing on practical, engineering-led improvements that reduce
-            complexity, improve visibility, and strengthen cloud environments
-            without unnecessary overengineering.
+            I work with Small and Medium-Sized Enterprises (SMEs) to help them
+            run AWS environments in a more cost-efficient, secure, and
+            manageable way without unnecessary technical complexity.
           </p>
         </section>
 
@@ -327,7 +328,8 @@ export default function Home() {
           <h2 style={{ marginBottom: "10px" }}>Book Your Free AWS Review</h2>
 
           <p style={{ color: "#94a3b8" }}>
-            A focused conversation to understand your AWS setup and priorities.
+            A focused conversation to understand your AWS setup and identify
+            improvement opportunities.
           </p>
 
           <div style={{ marginTop: "15px" }}>
